@@ -11,7 +11,7 @@ When you want to use this app, you need a Speech instance (https://azure.microso
 
 From the speech service you get the subscription Key, region and service url.
 
-These Values can be configured in the component ""
+These Values can be configured in the component "VoiceInput"
 
 ```js
 const securityKey: string = "[YOUR-KEY]";
