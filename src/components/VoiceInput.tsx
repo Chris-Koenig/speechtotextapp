@@ -13,7 +13,7 @@ function VoiceInput() {
 
     // Example. Never do this in production!
     // get the key from a custom backend service!
-    // const securityKey: string = "jsa45ad84k764u74568dd6f741354d6y";
+    // const securityKey: string = "abcdefg1234567890123abc1234abcde";
     // const speechAPIEndpoint: string = `https://my-speech.cognitiveservices.azure.com/sts/v1.0/issuetoken`;
     // const language: string = "de-DE";
     // const region: string = "switzerlandnorth";
@@ -25,7 +25,6 @@ function VoiceInput() {
 
     // get token 
     useEffect(() => {
-        alert("hi");
         GetSpeechApiToken(securityKey, speechAPIEndpoint)
             .then(token => {
                 if (token != null)
