@@ -3,10 +3,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Summary
+
 This projects uses the azure cognitive service "Speech". 
 The goal is to find out how to use this in a react SPA.
 
-## Configuration
+## Configuration
+
 When you want to use this app, you need a Speech instance (https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/#overview).
 
 From the speech service you get the subscription Key, region and service url.
