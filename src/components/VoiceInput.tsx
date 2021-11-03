@@ -11,13 +11,8 @@ function VoiceInput() {
     const [speechIsReady, setSpeechIsReady] = useState<boolean>(false);
     const [token, setToken] = useState<string>("");
 
-    // Example. Never do this in production!
-    // get the key from a custom backend service!
-    // const securityKey: string = "abcdefg1234567890123abc1234abcde";
-    // const speechAPIEndpoint: string = `https://my-speech.cognitiveservices.azure.com/sts/v1.0/issuetoken`;
-    // const language: string = "de-DE";
-    // const region: string = "switzerlandnorth";
-
+    // Warning. Never do this in production!
+    // Move the method using the securityKey to a custom backend service!
     const securityKey: string = "[YOUR-KEY]";
     const speechAPIEndpoint: string = "https://[YOUR-NAME].cognitiveservices.azure.com/sts/v1.0/issuetoken";
     const language: string = "de-DE";
