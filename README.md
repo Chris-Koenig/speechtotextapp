@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This projects uses the azure cognitive service "Speech". 
 The goal is to find out how to use this in a react SPA.
 
-## Config
+## Configuration
 
 When you want to use this app, you need a Speech instance (https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/#overview).
 
