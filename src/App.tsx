@@ -5,7 +5,6 @@ import VoiceInput from "./components/VoiceInput";
 function App() {
   return (
     <div className="App">
-   
     <header className="App-header">
         <VoiceInput/>
       </header>
