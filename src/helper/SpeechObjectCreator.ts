@@ -9,5 +9,5 @@ export function CreateRecognizer(token:string, region:string, language:string): 
         return new SpeechRecognizer(speechConfig, audioConfig);
     }
     else
-        throw Error();
+        throw new Error('parameter missing in method CreateRecognizer ');
 }

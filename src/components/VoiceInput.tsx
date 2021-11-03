@@ -18,9 +18,9 @@ function VoiceInput() {
     // const language: string = "de-DE";
     // const region: string = "switzerlandnorth";
 
-    const securityKey: string = "[YOUR-KEY]";
-    const speechAPIEndpoint: string = "https://[YOUR-NAME].cognitiveservices.azure.com/sts/v1.0/issuetoken";
-    const language: string = "de-DE";
+    const securityKey: string = "[KEY]";
+    const speechAPIEndpoint: string = "[URL]";
+    const language: string = "de-CH";
     const region: string = "switzerlandnorth";
 
     // get token 
@@ -34,6 +34,7 @@ function VoiceInput() {
 
     }, []);
 
+    // get the recognizer
     useEffect(() => {
         setRecognizer(CreateRecognizer(token, region, language));
         setSpeechIsReady(true);
@@ -47,25 +48,28 @@ function VoiceInput() {
 
             setRecognizingText("...speak to your microphone...");
             setRecognizedText("... i do listen ...")
-
+            
+            // returns words understood, no punctuation
             recognizer.recognizing = (s, e) => {
                 if (e.result.reason === ResultReason.RecognizingSpeech) {
                     setRecognizingText(e.result.text);
                 }
             };
-
+            
+            // return whole sentences with punctuation.
             recognizer.recognized = (s, e) => {
                 if (e.result.reason === ResultReason.RecognizedSpeech) {
                     setRecognizedText(e.result.text);
                 }
             };
-
         }
     }
 
     async function sttFromMicStop() {
         if (recognizer != null) {
             recognizer.stopContinuousRecognitionAsync();
+            setRecognizingText("...");
+            setRecognizedText("...")
         }
     }
 
