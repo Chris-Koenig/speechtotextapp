@@ -16,9 +16,10 @@ From the speech service you get the subscription Key, region and service url.
 These Values can be configured in the component "VoiceInput"
 
 ```js
-const securityKey: string = "[YOUR-KEY]";
-const speechAPIEndpoint: string = "https://[YOUR-NAME].cognitiveservices.azure.com/sts/v1.0/issuetoken";
-const language: string = "de-DE";
+const securityKey: string = "[KEY";
+const speechAPIEndpoint: string = "[URL]";
+const sourceLanguage: string = "de-DE";
+const translationTargetLanguage = "en";
 const region: string = "switzerlandnorth";
 ```
 
